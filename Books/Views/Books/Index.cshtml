@@ -1,0 +1,14 @@
+﻿@model Books.ViewModel.BooksViewModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+
+<div class="container">
+    <div class="row equal">
+        @foreach (var book in Model.Books)
+        {
+            @await Html.PartialAsync("_book", book)
+        }
+    </div>
+</div>

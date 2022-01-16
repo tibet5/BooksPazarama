@@ -1,0 +1,16 @@
+﻿@model Author
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="/img/@Model.ImageUrl" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Name</h4>
+        <p class="card-text">
+            @foreach (var genre in Model.Genres)
+            {
+                <a href="/books/genres/@genre.Id">@genre.Name</a><text>&nbsp;</text>
+
+            }
+        </p>
+        <a href="/authors/details/@Model.Id" class="btn btn-primary">Yazara Git</a>
+    </div>
+</div>

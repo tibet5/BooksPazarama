@@ -1,0 +1,19 @@
+﻿@model Books.ViewModel.BooksViewModel
+
+<h1>Arama Sonuclari</h1>
+
+<div class="container">
+    <div class="row equal">
+        @if (Model.Books.Count > 0)
+        {
+            foreach (var book in Model.Books)
+            {
+                @await Html.PartialAsync("_book", book)
+            }
+        }
+        else
+        {
+            <div class="alert alert-danger">Kitap bulunamadı</div>
+        }
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿@model List<Genre>
+
+@foreach (var genre in Model)
+{
+    <li><a class="dropdown-item @(ViewBag.SelectedGenre==genre.Id.ToString()?"active":"")" href="/books/genres/@genre.Id"> @genre.Name</a></li>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
